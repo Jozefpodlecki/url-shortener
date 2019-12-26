@@ -1,0 +1,102 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+html {
+  height: 100%;
+}
+
+body, .root {
+  height: inherit;
+  margin: 0;
+}
+
+body {
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #1565C0, #b92b27);
+  background: linear-gradient(to right, #1565C0, #b92b27);
+  color: white;
+  font-family: 'Gelasio', sans-serif;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container {
+  flex: 1 1 auto;
+}
+
+footer {
+  flex: 0 0 150px;
+  background: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.item {
+  padding-left: 30px;
+}
+
+.field {
+  margin: 10px;
+}
+
+#url_input {
+    padding: 10px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.social {
+  text-align: center;
+}
+
+.icon {
+  margin: 10px;
+}
+
+.httpMethod {
+  padding: 7px;
+  margin: 5px;
+  border-radius: 10px;
+  
+  &--get {
+    background: green;
+  }
+  
+  &--post {
+    background: red;
+  }
+}
+
+.submit {
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    border: 3px solid white;
+    font-weight: bold;
+    background: transparent;
+    transition: all 0.4s ease-in;
+  
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+}
