@@ -1,0 +1,40 @@
+extends layout.pug
+
+block scripts
+  script.
+    //const urlInput = document.getElementById('url_input');
+    // "api/shorturl/new"
+    
+
+block body
+    h1.header API Project: #{title}
+    
+    .item
+      h2 Usage
+      span.httpMethod.httpMethod--post POST
+      div
+        .field
+          label(class="label", for="url_input") URL to be shortened
+          input(id="url_input", type="text", name="url", value="https://www.freecodecamp.org")
+        div(class="field")
+          button.submit Send
+
+    .item.userStory
+      h2 User Story
+      ol
+        li I can POST a URL to #{url}api/shorturl/new and I will receive a shortened URL in the JSON response.
+        | Example : 
+        pre
+          code.json #{'{"original_url":"www.google.com","short_url":1}'}
+        li If I pass an invalid URL that doesn't follow the http(s)://www.example.com(/more/routes) format, the JSON response will contain an error like 
+        pre
+          code.json #{'{"error":"invalid URL"}'}
+        | HINT: to be sure that the submitted url points to a valid site you can use the function dns.lookup(host, cb) from the dns core module.
+        li When I visit the shortened URL, it will redirect me to my original link.
+
+    .item.urlCreation
+      h2 Short URL Creation
+      div
+        div
+          span POST
+        | #{url}api/shorturl/new - https://www.google.com
